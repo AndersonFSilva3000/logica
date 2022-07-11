@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Senha</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+          document.write("<br>");
+        }
+
+        function mostra(frase){
+          document.write(frase);
+          pulaLinha();
+        }
+
+        var loginCadastrado = "alura";
+        var senhaCadastrada = "alura123";
+
+        var tentativaAtual = 1;
+        var tentativaMaxima = 3;
+
+        while (tentativaAtual <= tentativaMaxima){
+
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+        if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+          alert ("Bem-Vindo ao Sistema, " + loginInformado);
+          
+          tesntativaAtula = tentativaMaxima
+        }else {
+          if (tentativaAtual == 3) {
+            alert("Número Permitido de tentativas ultrapassado !")
+          }else {
+            alert("Login inválido. Tente novamente")
+          }
+        }
+          tentativaAtual ++;
+        }
+
+    </script>
+</body>
+</html>

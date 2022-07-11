@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Números de 30 40 sem mostrar o 33 e 37</title>
+  <title>Calculadora do ano que tem copa</title>
 </head>
 <body>
     <script>
@@ -17,19 +17,16 @@
           pulaLinha();
         }
 
-        var n1 = 29;
+        var anoPCopa = 1930;
+        var limite = parseInt(prompt("Qual é o Ano Limite ?"))
 
-        
-        while (n1 <= 39) {
-
-          if ( n1 == 32 || n1 == 36){
-            n1 += 1; 
-          }   
-          n1 += 1;
-          mostra(n1);
+        while (anoPCopa <= limite){
+          mostra(anoPCopa + " (tem | teve) copa!")
+          anoPCopa += 4;
         }
 
-          mostra("Fim");
+        mostra("Esses foram os anos que teve ou tem copa do mundo até " + limite)
+
     </script>
 </body>
 </html>
