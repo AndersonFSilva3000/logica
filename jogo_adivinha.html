@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <script>
+        function pularLinha(){
+          document.write("<br>");
+        }
+
+        function mostra(frase){
+          document.write(frase);
+          pularLinha();
+        }
+
+        function sorteio(n){
+          numerPensado = Math.round(Math.random() * n);
+          return numerPensado;
+        }
+
+        var numerPensado = sorteio(10);
+        var chute = parseInt(prompt("Digite seu chute!"));
+
+        if (chute == numerPensado){
+          mostra("Você Acertou!")
+        } else {
+             if (chute > numerPensado) {
+               mostra("Você errou, o número que você chutou é maior que o número sorteado. ");
+          } else {
+          mostra("Você errou, o número que você chutou é menor que o número sorteado.")
+        }
+          }
+        
+        
+        
+    </script>
+</body>
+</html>
