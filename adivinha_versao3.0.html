@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versão 3.0 Jogo Adivinha</title>
+</head>
+<body>
+    <input type="text">
+    <button>Descubla meu Segredo !</button>
+
+    <script>
+        function sorteio(){
+          return Math.round(Math.random * 10);
+        }
+
+        function sorteioNumeros(quantidade){
+
+          var segredo = [];
+          var numero = 1;
+
+          while(numero <= quantidade) {
+
+              numeroAleatorio = sorteio();
+              achou = false;
+
+              if (numeroAleatorio !== 0){
+              for(var posicao = 0; posicao < segredo.length; posicao++){
+                  if(segredo[posicao] == numeroAleatorio){
+                      achou = true;
+                      break;
+                  }
+              }
+
+              if (achou == false){
+                  segredo.push(numeroAleatorio);
+                  numero++;
+              }
+            }
+              
+          }
+          return segredo;
+        }
+
+        var segredo = sorteioNumeros(3);
+
+        console.log(segredo);
+
+        var input = document.querySelector("input");
+        input.focus();
+        
+        function verificar (){
+          
+          var achou = false; 
+
+          for (var posicao = 0; posicao < segredo.length; posicao++) {
+
+              if(input.value == segredo[posicao]) {
+
+                  alert("Você ACERTOU !");
+                  achou = true;
+                  break;
+              }
+          }
+
+          if(achou == false) {
+
+              alert("Você ERROU !!!")
+          }
+
+          input.value = "";
+          input.focus();
+        }
+
+        var button = document.querySelector("button");
+
+        button.onclick = verificar;
+    </script>
+</body>
+</html>
