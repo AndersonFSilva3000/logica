@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas do Yan</title>
+</head>
+<body>
+    <h1>Receitas do Yan</h1>
+
+    <label for="number">Informe a quantidade de ingredientes : </label>
+    <input type="number">
+    <button class="button1">Ok</button>
+
+    <p>
+      <label for="txt">Informe os ingredinetes : </label>
+      <input type="text" class="ingrediente">
+      <button>Ok</button>
+    </p>
+    
+
+    <script>
+        var ingredientes = [];
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        var contador = 1;
+
+        while(contador <= input.value){
+
+              var ingrediente = document.querySelector("ingrediente");
+
+              ingredientes.push(ingrediente)
+              contador++;
+        }
+
+        console.log(ingredientes);
+
+        var button1 = document.querySelector("button")
+        
+        button1.onclick = ...;
+
+    </script>
+</body>
+</html>
